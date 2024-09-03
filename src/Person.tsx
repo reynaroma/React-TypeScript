@@ -10,9 +10,9 @@ export const Person = (props: Person) => {
 
   const [isShowInfo, setShowInfo] = useState<boolean>(false);
   // every time the button is clicked, the value of the state will be toggled
-  const toggeleInfo = () => {
-    setShowInfo((prev) => !prev);
-  }
+  // const toggeleInfo = () => {
+  //   setShowInfo((prev) => !prev);
+  // }
 
   return (
     <div>
@@ -23,7 +23,7 @@ export const Person = (props: Person) => {
           <p>This person {props.isMarried ? "is married." : "is single."}</p>
         </>
       )}
-
+      {/* <button onClick={toggeleInfo}>Toggle Info</button> */}
     </div>
   )
 }
