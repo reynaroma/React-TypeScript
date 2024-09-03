@@ -1,4 +1,10 @@
-export const Person = (props) => {
+export interface Person {
+  name: string;
+  age: number;
+  isMarried: boolean;
+}
+
+export const Person = (props: Person) => {
   return (
     <div>
       <p>Name: {props.name}</p>
