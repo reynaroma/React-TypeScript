@@ -9,6 +9,10 @@ export interface Person {
 export const Person = (props: Person) => {
 
   const [isShowInfo, setShowInfo] = useState<boolean>(false);
+  // every time the button is clicked, the value of the state will be toggled
+  const toggeleInfo = () => {
+    setShowInfo((prev) => !prev);
+  }
 
   return (
     <div>
