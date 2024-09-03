@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export interface Person {
   name: string;
   age: number;
@@ -5,6 +7,9 @@ export interface Person {
 }
 
 export const Person = (props: Person) => {
+
+  const [isShowInfo, setShowInfo] = useState();
+
   return (
     <div>
       <p>Name: {props.name}</p>
