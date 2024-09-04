@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 
-function UserProfileEditor({ user, onUpdate }) {
+interface User {
+  name: string;
+  email: string;
+}
+
+interface Props {
+  user: User;
+  onUpdate: (user: User) => void;
+}
+
+export default function UserProfileEditor({ user, onUpdate }: Props) {
 
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
