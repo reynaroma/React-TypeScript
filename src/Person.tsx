@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-export interface Person {
+export interface User {
   name: string;
   age: number;
   isMarried: boolean;
 }
 
-export const Person = (props: Person) => {
+export const User = (props: User) => {
   const [personBio, setPersonBio] = useState<string | null>(null);
   // const [isShowInfo, setShowInfo] = useState<boolean>(false);
   // every time the button is clicked, the value of the state will be toggled
@@ -30,7 +30,7 @@ export const Person = (props: Person) => {
       {/* <button onClick={toggeleInfo}>Toggle Info</button> */}
       {" "}
       <p>{props.name} Bio: {!personBio ? "No Bio available" : personBio}</p>
-      <input onChange={handleChange}/>
+      <input onChange={handleChange} />
     </div>
   )
 }

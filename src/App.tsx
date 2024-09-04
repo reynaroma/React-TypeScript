@@ -1,13 +1,13 @@
 import './App.css';
-import { Person } from './Person';
+import { User } from './Person';
 
 function App() {
 
   return (
     <>
-      <Person name={"Reyna"} age={27} isMarried={false} />
-      <Person name={"Tine"} age={26} isMarried={false} />
-      <Person name={"Toffee"} age={3} isMarried={false} />
+      <User name={"Reyna"} age={27} isMarried={false} />
+      <User name={"Tine"} age={26} isMarried={false} />
+      <User name={"Toffee"} age={3} isMarried={false} />
     </>
   )
 }
