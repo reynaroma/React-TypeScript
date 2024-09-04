@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { UserContext } from "./UserContextProvider";
 
 interface Props {
   name: string;
@@ -13,6 +14,8 @@ export const User = (props: Props) => {
   // const toggeleInfo = () => {
   //   setShowInfo((prev) => !prev);
   // }
+
+  const { users, updateUser, deleteUser, addUser } = useContext(UserContext)
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPersonBio(event.target.value)
