@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 
 export interface User {
   name: string;
@@ -27,6 +27,8 @@ interface Props {
 }
 
 export const UserProvider = (props: Props) => {
+
+  const [users, setUser] = useState<User[] | null>(null);
   return (
     <>{props.children}</>
   )
