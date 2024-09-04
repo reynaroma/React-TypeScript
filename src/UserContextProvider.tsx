@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import React, { createContext } from "react";
 
 export interface User {
   name: string;
@@ -21,3 +21,13 @@ const contextInitialValues = {
 }
 
 const UserContext = createContext<UserContextType>(contextInitialValues);
+
+interface Props {
+  children: React.ReactNode;
+}
+
+export const UserProvider = (props: Props) => {
+  return (
+    <>{props.children}</>
+  )
+}
