@@ -12,8 +12,8 @@ interface Props {
 
 export default function UserProfileEditor({ user, onUpdate }: Props) {
 
-  const [name, setName] = useState(user.name);
-  const [email, setEmail] = useState(user.email);
+  const [name, setName] = useState<string>(user.name);
+  const [email, setEmail] = useState<string>(user.email);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
