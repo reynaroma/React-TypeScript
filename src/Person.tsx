@@ -1,11 +1,21 @@
 import React, { useContext, useState } from "react";
-import { UserContext } from "./UserContextProvider";
+// import { UserContext } from "./UserContextProvider";
 
 interface Props {
   name: string;
   age: number;
   isMarried: boolean;
+  country: Countries;
 }
+
+export enum Countries {
+  Brazil = "Brazil",
+  France = "France",
+  Philippines = "Philippines",
+  UnitedStates = "United States",
+  India = "India",
+}
+
 
 export const User = (props: Props) => {
   const [personBio, setPersonBio] = useState<string | null>(null);
@@ -15,7 +25,7 @@ export const User = (props: Props) => {
   //   setShowInfo((prev) => !prev);
   // }
 
-  const { users, updateUser, deleteUser, addUser } = useContext(UserContext)
+  // const { users, updateUser, deleteUser, addUser } = useContext(UserContext)
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPersonBio(event.target.value)
@@ -33,6 +43,7 @@ export const User = (props: Props) => {
       {/* <button onClick={toggeleInfo}>Toggle Info</button> */}
       {" "}
       <p>{props.name} Bio: {!personBio ? "No Bio available" : personBio}</p>
+      <p>Country of Origin: {props.country}</p>
       <input onChange={handleChange} />
     </div>
   )
