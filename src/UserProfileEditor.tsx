@@ -15,7 +15,7 @@ export default function UserProfileEditor({ user, onUpdate }: Props) {
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     onUpdate({
       ...user,
@@ -31,7 +31,7 @@ export default function UserProfileEditor({ user, onUpdate }: Props) {
         <input
           type='text'
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
         />
       </div>
       <div>
@@ -39,7 +39,7 @@ export default function UserProfileEditor({ user, onUpdate }: Props) {
         <input
           type='email'
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
         />
       </div>
       <button type='submit'>Update Profile</button>
