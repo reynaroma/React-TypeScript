@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export interface Props {
+interface Props {
   name: string;
   age: number;
   isMarried: boolean;
