@@ -1,3 +1,5 @@
+import { createContext } from "react";
+
 export interface User {
   name: string;
   age: number;
@@ -11,4 +13,11 @@ interface UserContextType {
   deleteUser: (id: string) => void;
 }
 
-const UserContext = createContext<UserContextType>();
+const contextInitialValues = {
+  users: null,
+  addUser: () => null,
+  updateUser: () => null,
+  deleteUser: () => null,
+}
+
+const UserContext = createContext<UserContextType>(contextInitialValues);
