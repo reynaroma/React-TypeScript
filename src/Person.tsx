@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-export interface User {
+export interface Props {
   name: string;
   age: number;
   isMarried: boolean;
 }
 
-export const User = (props: User) => {
+export const User = (props: Props) => {
   const [personBio, setPersonBio] = useState<string | null>(null);
   // const [isShowInfo, setShowInfo] = useState<boolean>(false);
   // every time the button is clicked, the value of the state will be toggled

@@ -1,5 +1,5 @@
 import './App.css';
-import { User } from './Person';
+import { Props } from './Person';
 
 function App() {
 
