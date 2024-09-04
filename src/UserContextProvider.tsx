@@ -34,7 +34,11 @@ export const UserProvider = (props: Props) => {
     setUsers([{name: "Reyna", age: 27, isMarried: false}]);
   }, []);
 
+  const addUser = (user: User) => null;
+  const updateUser = (id: string) => null;
+  const deleteUser = (id: string) => null;
+
   return (
-    <UserContext.Provider value={{users}}>{props.children}</UserContext.Provider>
+    <UserContext.Provider value={{users, addUser, updateUser, deleteUser}}>{props.children}</UserContext.Provider>
   )
 }
